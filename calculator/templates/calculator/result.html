@@ -1,0 +1,20 @@
+{% extends 'calculator/base.html' %}
+{% block content %}
+<h4>{{ url }}</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="row">Word</th>
+            <th scope="row">Repeats</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for word in words %}
+        <tr>
+            <td scope="row">{{ word.word }}</td>
+            <td scope="row">{{ word.repeat }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

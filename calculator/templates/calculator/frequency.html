@@ -1,0 +1,10 @@
+{% extends 'calculator/base.html' %}
+{% block content %}
+<h1>Url Please...</h1><br>
+<form method="POST">
+    {% csrf_token %}
+    <label class="label">Enter the URL:</label>
+    <input name="url" style="width: 70%;" type="text" placeholder="URL" required>
+    <button type="submit">Calculate</button>
+</form>
+{% endblock content %}
